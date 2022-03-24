@@ -17,8 +17,8 @@ public class Taller {
     }
 
     public static void darCantidadProductos(int[] carrito) {
-        for (int i = 0; i < carrito.length; i++) {
-            carrito[i] = getNumeroAleatorio(16);
+        for (var posicion = 0; posicion < carrito.length; posicion++) {
+            carrito[posicion] = getNumeroAleatorio(16);
         }
     }
 
@@ -47,7 +47,7 @@ public class Taller {
 
     private static void mostrarSubtotal(int[] carrito, int[] precio) {
 
-        for (int posicion = 0; posicion < carrito.length; posicion++) {
+        for (var posicion = 0; posicion < carrito.length; posicion++) {
             mostrarDetalleProducto(posicion, carrito[posicion], precio[posicion]);
         }
     }
@@ -69,7 +69,7 @@ public class Taller {
     private static int calcularTotal(int[] carrito, int[] precios) {
         var total = 0;
 
-        for (int posicion = 0; posicion < carrito.length; posicion++) {
+        for (var posicion = 0; posicion < carrito.length; posicion++) {
             total += carrito[posicion] * precios[posicion];
         }
         return total;
@@ -84,7 +84,7 @@ public class Taller {
 
         var numeroProductos = 0;
 
-        for (int numeroProducto : carrito) {
+        for (var numeroProducto : carrito) {
             numeroProductos += numeroProducto;
         }
         return numeroProductos;
